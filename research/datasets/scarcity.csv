@@ -1,10 +1,13 @@
-is_scarcity,text,path
-1,Últimas 3 unidades disponibles,/producto/123
-1,Solo quedan 2 en stock,/producto/456
-1,¡Aprovecha! Quedan pocas unidades,/oferta/789
-1,¡Compra ahora mismo antes de que se acabe!,/home/banner1
-1,Solo 3 unidades restantes!,/producto/789
-1,Última disponible,/oferta/789
-1,Última unidad disponible,/oferta/789
-0,Producto disponible para envío inmediato,/producto/321
-0,Hay suficiente stock para todos,/producto/654
+is_scarcity,text,origin
+1,Últimas 3 unidades disponibles,""
+1,Solo quedan 2 en stock,""
+1,¡Aprovecha! Quedan pocas unidades,""
+1,¡Compra ahora mismo antes de que se acabe!,""
+1,Solo 3 unidades restantes!,""
+1,Última disponible,""
+1,Última unidad disponible,""
+0,Producto disponible para envío inmediato,""
+0,Hay suficiente stock para todos,""
+1,Quedan 2 unidades y una está en el carrito de otra persona,Etsy
+1,En 18 carritos,Etsy
+1,Solo hay 1 y está en 1 carrito,Etsy
