@@ -1,0 +1,37 @@
+is_urgency,text,path
+1,¡Compra ahora mismo antes de que se acabe!,/home/banner1
+1,La oferta termina en 2h 15m,/product/123/timer
+1,Ends in 7h 16m 2s,/flash-sale/timer
+1,Última oportunidad para participar,/checkout/upsell
+1,Descuento relámpago finaliza hoy,/promo/lightning
+1,No te quedes fuera de esta promoción,/landing/offer
+1,Oferta limitada solo por hoy,/daily-deal
+1,El envío gratis termina pronto,/checkout/shipping
+1,Hurry up! Limited time offer!,/global/promo
+1,Flash deals ending soon,/flashdeals
+1,OFERTA FLASH,/img1/banner
+1,finaliza en 1h 20m,/img1/banner
+1,PROMOCIÓN relámpago,/img1/banner2
+1,Compra ya,/img2/popup2
+1,finaliza en 3h,/img3/timer
+1,termina en 2 días,/img3/banner
+1,¡Apresúrate!,/img6/promo
+1,Promoción válida hasta medianoche,/img6/promo
+1,Tiempo restante 8:23:23,/tiendamia
+1,Ofertas por día 8:23:23,/tiendamia
+1,8:23:23 -45%,/shein
+1,Cupon: 8:23:23,/shein
+1,Último dia de 31.4% de descuento,/shein
+1,Tiempo limitado,/shein
+1,Solo quedan 13 horas para obtener 21% de descuento!,/shein
+0,Clase de yoga termina en 10 minutos,/events/yoga
+0,La inscripción al curso cierra en 3 días,/courses/python
+0,Su sesión expira en 5 minutos,/auth/session
+0,El partido empieza en 15 minutos,/sports/match
+0,La batería del dispositivo se agotará en 2h,/system/alert
+0,recibe un regalo extra,/img2/popup2
+0,Tu sesión caducará en 1 minuto,/img4/alert
+0,El examen comienza en 30 segundos,/img5/exam
+0,¡Participa ya!,/img5/banner
+0,gana descuentos exclusivos,/img5/banner
+0,Últimas unidades disponibles,/img6/stock

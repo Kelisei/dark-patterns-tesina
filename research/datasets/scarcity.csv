@@ -1,0 +1,10 @@
+is_scarcity,text,path
+1,Últimas 3 unidades disponibles,/producto/123
+1,Solo quedan 2 en stock,/producto/456
+1,¡Aprovecha! Quedan pocas unidades,/oferta/789
+1,¡Compra ahora mismo antes de que se acabe!,/home/banner1
+1,Solo 3 unidades restantes!,/producto/789
+1,Última disponible,/oferta/789
+1,Última unidad disponible,/oferta/789
+0,Producto disponible para envío inmediato,/producto/321
+0,Hay suficiente stock para todos,/producto/654

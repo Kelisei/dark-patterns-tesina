@@ -1,14 +1,12 @@
 from flask import Flask, request
 from flask_cors import CORS
-from src.shaming.shaming import check_text_shaming, check_text_shaming_nopath
 
-from src.urgency.urgency import check_text_urgency
-from src.scarcity.scarcity import check_text_scarcity, check_text_scarcity_schema
-from src.urgency.types import UrgencyRequestSchema, UrgencyResponseSchema
-from src.scarcity.types import ScarcityRequestSchema, ScarcityResponseSchema
-from src.urgency.urgency import check_text_urgency_schema
-
+from src.scarcity.scarcity import check_text_scarcity_schema
+from src.scarcity.types import ScarcityRequestSchema
 from src.shaming.my_types import ShamingSchema, ShamingResponse
+from src.shaming.shaming import check_text_shaming, check_text_shaming_nopath
+from src.urgency.types import UrgencyRequestSchema
+from src.urgency.urgency import check_text_urgency_schema
 
 app = Flask(__name__)
 CORS(app)
@@ -19,14 +17,14 @@ def detect_scarcity():
     Detecta patrones de escasez en los textos recibidos mediante una solicitud POST.
 
     Este endpoint recibe un JSON que sigue el esquema `ScarcityRequestSchema`, 
-    valida los datos y devuelve un JSON con el resultado siguiendo el esquema `ScarcityResponseSchema`.
+    válida los datos y devuelve un JSON con el resultado siguiendo el esquema `ScarcityResponseSchema`.
 
     JSON de entrada (ejemplo):
     {
         "version": "1.0",
         "texts": [
             {
-                "text": "Solo quedan 3 unidades!",
+                "text": "¡Solo quedan 3 unidades!",
                 "path": "/producto/123",
                 "id": "e1"
             },
@@ -42,7 +40,7 @@ def detect_scarcity():
         "version": "1.0",
         "instances": [
             {
-                "text": "Solo quedan 3 unidades!",
+                "text": "¡Solo quedan 3 unidades!",
                 "path": "/producto/123",
                 "id": "e1",
                 "has_scarcity": true
@@ -73,8 +71,8 @@ def detect_shaming():
 
     - Si la versión es distinta de "0.2", itera sobre los tokens recibidos y utiliza la función `check_text_shaming`
         para detectar patrones de shaming en cada texto, devolviendo una lista de resultados.
-    - Si la versión es "0.2", valida y deserializa los datos usando `ShamingSchema`, luego procesa los textos con
-        `check_text_shaming_nopath` y devuelve la respuesta serializada con `ShamingResponse`.
+    - Si la versión es "0.2", válida y deserialize los datos usando `ShamingSchema`, luego procesa los textos con
+        `check_text_shaming_path` y devuelve la respuesta serializada con `ShamingResponse`.
 
     Returns:
         list o dict: Resultados del análisis de shaming, dependiendo de la versión del esquema recibido.
@@ -100,15 +98,15 @@ def detect_urgency():
     Detecta patrones de urgencia en los textos recibidos mediante una solicitud POST.
 
     Este endpoint recibe un JSON que sigue el esquema `UrgencyRequestSchema`, 
-    valida los datos y devuelve un JSON con el resultado siguiendo el esquema `UrgencyResponseSchema`.
+    válida los datos y devuelve un JSON con el resultado siguiendo el esquema `UrgencyResponseSchema`.
 
     JSON de entrada (ejemplo):
     {
         "version": "1.0",
         "texts": [
             {
-                "text": "Compra ahora, promoción válida solo hoy!",
-                "path": "/promociones/dia",
+                "text": "¡Compra ahora, promoción válida solo hoy!",
+                "path": "/promociones/día",
                 "id": "u1"
             },
             {
@@ -122,8 +120,8 @@ def detect_urgency():
         "version": "1.0",
         "urgency_instances": [
             {
-                "text": "Compra ahora, promoción válida solo hoy!",
-                "path": "/promociones/dia",
+                "text": "¡Compra ahora, promoción válida solo hoy!",
+                "path": "/promociones/día",
                 "id": "u1",
                 "has_urgency": true
             },

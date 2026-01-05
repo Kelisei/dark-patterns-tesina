@@ -1,7 +1,9 @@
 from config import NLP
 from spacy.matcher import Matcher
-from src.scarcity.types import ScarcityResponseSchema
 
+from research.DarkPatternPredictor import DarkStrategy
+from src.scarcity.types import ScarcityResponseSchema
+import pandas as pd
 scarcity_matcher = Matcher(NLP.vocab)
 scarcity_patterns = [
     # Oraciones del tipo "Últimas 3 unidades" o "ultimo disponible"
@@ -161,7 +163,6 @@ scarcity_patterns = [
         },
         {"IS_PUNCT": True, "OP": "*"},
     ],
-    # Solo 3 restantes! (sin el sustantivo, frase cortada)
     [
         {"IS_PUNCT": True, "OP": "*"},
         {"LOWER": {"REGEX": "s[oó]lo"}},
@@ -180,49 +181,19 @@ scarcity_matcher.add("fake_scarcity", scarcity_patterns)
 
 def check_text_scarcity(text):
     """
-    Analiza el texto para detectar patrones de escasez y devuelve coincidencias encontradas.
-
-    Parámetros:
-        text (str): El texto que se desea analizar en busca de patrones de escasez.
-
-    Retorna:
-        list[dict]: Una lista de diccionarios, cada uno representando una coincidencia encontrada.
-            Cada diccionario contiene:
-                - "text" (str): El fragmento de texto que coincide con un patrón de escasez.
-                - "pattern" (str): El nombre del patrón de escasez detectado.
-
-    Notas sobre variables internas:
-        - doc: Objeto procesado por el modelo NLP a partir del texto de entrada.
-        - token: Cada palabra o símbolo individual en el texto, con atributos como lemma, parte de la oración, etc.
-        - matches: Coincidencias encontradas por scarcity_matcher en el texto procesado.
-        - span: Fragmento del texto correspondiente a una coincidencia.
     """
     doc = NLP(text)
-    matches = scarcity_matcher(doc)
-    results = []
-    for match_id, start, end in matches:
-        span = doc[start:end]
-        results.append({"text": span.text, "pattern": NLP.vocab.strings[match_id]})
-    return results
+    for _ in scarcity_matcher(doc):
+        return True
+    return False
 
 
-def check_text_scarcity_schema(data):
-    """
-    Recibe un dict validado por ScarcityRequestSchema
-    y devuelve la respuesta serializada por ScarcityResponseSchema.
-    Cada instancia indica si el texto tiene escasez (has_scarcity).
-    """
-    instances = []
-    for analized_text in data["texts"]:
-        text = analized_text["text"]
-        path = analized_text["path"]
-        id_ = analized_text.get("id")
-        matches = check_text_scarcity(text)
-        instance = {"text": text, "path": path, "has_scarcity": bool(matches)}
-        if id_ is not None:
-            instance["id"] = id_
-        instances.append(instance)
-    response_schema = ScarcityResponseSchema()
-    response = {"version": data["version"], "instances": instances}
-    return response_schema.dump(response)
+class ScarcityPredictorNLP(DarkStrategy):
+    def predict(self,text: str):
+        return check_text_scarcity(text)
 
+    def predict_multiple(self,texts: pd.Series):
+        predictions = []
+        for text in texts:
+            predictions.append(check_text_scarcity(text))
+        return predictions
