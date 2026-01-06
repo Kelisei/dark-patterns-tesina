@@ -100,7 +100,7 @@ fake_urgency,La oferta termina en 71h 59m,duolingo
 fake_urgency,Oferta relámpago de un día,desconocido
 fake_urgency,Ventas flash de fin de smeana,temu
 fake_scarcity,SOLO QUEDAN(N) 3,temu
-fake_urgency,Último día ,temu
+fake_urgency,"Último día ",temu
 fake_urgency,Última oportunidad,spotify
 fake_scarcity,¡Últimas 4 unidades disponibles!,stockcenter
 fake_urgency,Solo quedan 12 horas para obtener 21% de descuento,temu
@@ -117,11 +117,59 @@ ninguno,8 tamaños,wish
 ninguno,ARS2.100 de crédito por retraso,temu
 ninguno,Llega a AR en tan solo 3 días hábiles después del envío,temu
 ninguno,558 ventas,temu
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
+shaming,Continuar sin apoyarnos,Baeldung
+shaming,"No gracias, no quiero tener más diversión con mi bicicleta",Bicycling.com
+shaming,"No gracias, prefiero pagar el precio completo",Booklinen
+shaming,"No, quiero perder 1 dia por semana",ClickUp
+shaming,"No gracias, prefiero pagar el precio completo por delicioso té",communiTEA
+shaming,"No, no me importa cual es mejor",Desconocido
+shaming,"No gracias, estoy bien perdiendo suscriptores",Desconocido
+shaming,"No gracias, voy a hacer comida al microondas hoy",Delish
+shaming,"No gracias, prefiero hacer todo el trabajo yo",Desconocido
+shaming,No quiero beneficios,Despegar
+shaming,"No gracias, no quiero entender a mi perro",Dogsters
+shaming,Reject the ebook,eBook
+shaming,"No gracias, no me gusta ahorrar tiempo y te odio",Desconocido
+shaming,Me encanta ahorrar dinero,FashionNova
+shaming,"No, estoy feliz con mi página lenta",Desconocido
+shaming,"No, estoy dispuesto a arriesgar mi vida",Desconocido
+shaming,"No, me gusta pagar el precio completo",Desconocido
+shaming,"Olvídalo, quiero juegos geniales",Desconocido
+shaming,"No, odio los buenos momentos",Desconocido
+shaming,"No gracias, odio los abrazos",Desconocido
+shaming,Soy una mala persona,Desconocido
+shaming,No quiero aprender,Desconocido
+shaming,"No gracias, prefiero no aprender...",Desconocido
+shaming,"No gracias, no necesito un logo asombroso",Logo
+shaming,"No gracias, no quiero lucir bien",Desconocido
+shaming,"No gracias, no estoy buscando una forma facil",Desconocido
+shaming,"No, no quiero mantenerme vivo",MyMedic
+shaming,"Si, quiero más tráfico",NeilPatel
+shaming,"No, tengo suficiente tráfico",NeilPatel
+shaming,"No gracias, no soy fanático del aire libre",Desconocido
+shaming,"No gracias, no me gusta la comida deliciosa",Desconocido
+shaming,"No, no me importa",RealTEA
+shaming,"No gracias, no me gusta ahorrar",Desconocido
+shaming,"Si, amo las ofertas",Desconocido
+shaming,"No gracias, voy a ser el último en enterarme",Desconocido
+shaming,"No quiero ser saludable, cancelar mi suscripción",TreatsPlease
+ninguno,No gracias,Desconocido
+ninguno,Quiero aprender SEO,aprendoseo
+ninguno,Quiero saber más,aprendoseo
+ninguno,Quiero más info,aprendoseo
+ninguno,Quiero mi código,LaNacion
+ninguno,Quiero una consultoría digital,JuanMenorio
+ninguno,"Si, me voy a quedar el producto",Amazon
+ninguno,"No, lo quiero devolver",Amazon
+ninguno,Si por favor,CocaCola
+ninguno,Descubrirlo ahora,Desconocido
+ninguno,Mostrame 14 recetas simples,Delish
+ninguno,"Si, mandenmé alertas de stock",Desconocido
+ninguno,"Si, obtener el ebook",eBook
+ninguno,Descargar ahora,eBook
+ninguno,"Si, lo quiero",email
+ninguno,"Si, me quiero registrar",Desconocido
+ninguno,Cancelar mi suscripción,Desconocido
+ninguno,"Si, envienmé el plan de comidas",Desconocido
+ninguno,No quiero suscribirme en este momento,Desconocido
+ninguno,He leído y acepto la política de privacidad,niacinamide
