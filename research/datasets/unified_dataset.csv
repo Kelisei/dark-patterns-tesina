@@ -112,7 +112,7 @@ fake_urgency,Flash Sale Termina en 7h 16m 2s.,udemy
 fake_urgency,OFERTA FINALIZA EN 53 MIN.,ynkore
 ninguno,"4 colores, 5 piezas",wish
 ninguno,4 colores,wish
-fake_urgency,Hasta 27% de descuento,wish
+ninguno,Hasta 27% de descuento,wish
 ninguno,8 tamaños,wish
 ninguno,ARS2.100 de crédito por retraso,temu
 ninguno,Llega a AR en tan solo 3 días hábiles después del envío,temu
@@ -174,7 +174,7 @@ ninguno,"Si, envienmé el plan de comidas",Desconocido
 ninguno,No quiero suscribirme en este momento,Desconocido
 ninguno,He leído y acepto la política de privacidad,niacinamide
 ninguno,Clase de yoga termina en 10 minutos,IA
-fake_urgency,La inscripción al curso cierra en 3 días,IA
+ninguno,La inscripción al curso cierra en 3 días,IA
 ninguno,Su sesión expira en 5 minutos,IA
 ninguno,El partido empieza en 15 minutos,IA
 ninguno,La batería del dispositivo se agotará en 2h,IA
@@ -183,5 +183,35 @@ ninguno,Tu sesión caducará en 1 minuto,IA
 ninguno,El examen comienza en 30 segundos,IA
 ninguno,¡Participa ya!,IA
 ninguno,gana descuentos exclusivos,IA
-fake_scarcity,Últimas unidades disponibles,IA
-,,
+ninguno,Últimas unidades disponibles,IA
+ninguno,Disponible próximamente,boots
+ninguno,Muy pronto,boots
+ninguno,Tu pedido expirará en 11:38,Desconocido
+ninguno,Recibí una alerta cuando esté disponible,Desconocido
+ninguno,Suscribite al aviso de lanzamiento,Desconocido
+ninguno,Anotate para recibir una alerta cuando lancemos,Desconocido
+ninguno,Tu pedido vence en 11:38,Desconocido
+ninguno,Sorteo empieza,Desconocido
+ninguno,Lanzamiento de remeras de Halloween,Desconocido
+fake_urgency,Disponible únicamente durante una semana,Desconocido
+ninguno,Drop de remeras de Halloween,Desconocido
+ninguno,"En breve, una revista como nunca viste",Desconocido
+ninguno,¡Consigue beneficios exclusivos dentro de la app suscribiendote antes del lanzamiento!,Desconocido
+ninguno,Oferta extendida solo 2 días,Desconocido
+ninguno,Lanzamiento oficial en 24 horas,Desconocido
+ninguno,Unetenos para la oportunidad de ganar una tarjeta de regalo de Amazon o una PlayStation 5,Desconocido
+ninguno,Cuenta regresiva de Año Nuevo,Desconocido
+ninguno,Tiempo Restante para tu Año Nuevo,Desconocido
+ninguno,Tu contador regresivo para Navidad,Desconocido
+fake_urgency,Oferta de tiempo limitado: Descarga mi libro gratis.,Desconocido
+fake_urgency,Oferta del Día,Desconocido
+fake_urgency,Token vencé en ,Desconocido
+fake_urgency,Ofertas del día,Desconocido
+fake_urgency,Fijá el precio más bajo,Desconocido
+fake_urgency,El precio sube hasta 469 USD en,Desconocido
+fake_urgency,PREORDENA AHORA,Desconocido
+fake_urgency,¡Obten 10% de descuento entre tu primera orden! Codigo:FIRST10,Desconocido
+fake_urgency,¡Apurate y consigue tus favoritos mientras puedas!,Desconocido
+ninguno,Clasificación inicial de 2026,riot
+ninguno,Disponible en ,steam
+ninguno,Siguiente stream en,twitch
