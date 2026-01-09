@@ -112,11 +112,11 @@ Amo ahorrar dinero!,1
 Voy a pagar el precio completo,1
 Seguir sin apoyarnos,1
 Ignorar,0
-Prefiero no recibir correos promocionales, 0
+Prefiero no recibir correos promocionales," 0"
 Prefiero otra forma de pago,0
 No quiero descargar la app,0
 Me gusta el color azul,0
-Prefiero pagar con efectivo, 0
+Prefiero pagar con efectivo," 0"
 Me gusta ser feo,1
 Me gusta ser mala persona,1
 Me gusta el ejercicio,0
@@ -126,6 +126,6 @@ Me gusta leer libros de historia,0
 Me gusta aprender,0
 Me gusta la mayonesa,0
 Me gusta correr,0
-Me gusta tener hambre, 1
+Me gusta tener hambre," 1"
 Me gustan los perros,0
 Me gusta estudiar,0
