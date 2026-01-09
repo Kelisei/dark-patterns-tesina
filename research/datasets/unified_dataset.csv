@@ -112,7 +112,7 @@ fake_urgency,Flash Sale Termina en 7h 16m 2s.,udemy
 fake_urgency,OFERTA FINALIZA EN 53 MIN.,ynkore
 ninguno,"4 colores, 5 piezas",wish
 ninguno,4 colores,wish
-ninguno,Hasta 27% de descuento,wish
+fake_urgency,Hasta 27% de descuento,wish
 ninguno,8 tamaños,wish
 ninguno,ARS2.100 de crédito por retraso,temu
 ninguno,Llega a AR en tan solo 3 días hábiles después del envío,temu
@@ -174,7 +174,7 @@ ninguno,"Si, envienmé el plan de comidas",Desconocido
 ninguno,No quiero suscribirme en este momento,Desconocido
 ninguno,He leído y acepto la política de privacidad,niacinamide
 ninguno,Clase de yoga termina en 10 minutos,IA
-ninguno,La inscripción al curso cierra en 3 días,IA
+fake_urgency,La inscripción al curso cierra en 3 días,IA
 ninguno,Su sesión expira en 5 minutos,IA
 ninguno,El partido empieza en 15 minutos,IA
 ninguno,La batería del dispositivo se agotará en 2h,IA
@@ -183,5 +183,5 @@ ninguno,Tu sesión caducará en 1 minuto,IA
 ninguno,El examen comienza en 30 segundos,IA
 ninguno,¡Participa ya!,IA
 ninguno,gana descuentos exclusivos,IA
-ninguno,Últimas unidades disponibles,IA
+fake_scarcity,Últimas unidades disponibles,IA
 ,,
