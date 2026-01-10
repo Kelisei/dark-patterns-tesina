@@ -166,7 +166,7 @@ ninguno,Descubrirlo ahora,Desconocido
 ninguno,Mostrame 14 recetas simples,Delish
 ninguno,"Si, mandenmé alertas de stock",Desconocido
 ninguno,"Si, obtener el ebook",eBook
-ninguno,Descargar ahora,eBook
+fake_urgency,Descargar ahora,eBook
 ninguno,"Si, lo quiero",email
 ninguno,"Si, me quiero registrar",Desconocido
 ninguno,Cancelar mi suscripción,Desconocido
@@ -213,8 +213,37 @@ fake_urgency,PREORDENA AHORA,Desconocido
 fake_urgency,¡Obten 10% de descuento entre tu primera orden! Codigo:FIRST10,Desconocido
 fake_urgency,¡Apurate y consigue tus favoritos mientras puedas!,Desconocido
 ninguno,Clasificación inicial de 2026,riot
-ninguno,Disponible en ,steam
+ninguno,"Disponible en ",steam
 ninguno,Siguiente stream en,twitch
+ninguno,"No, estoy bien",Milenaria
+ninguno,Ver denuevo,Instagram
+ninguno,"Si, recibí el pedido",Milenaria
+ninguno,"No, no recibí mi pedido",Milenaria
+ninguno,"Si, deseo devolver mi compra",Milenaria
+ninguno,Prefiero recibir novedades más adelante,IA
+ninguno,Prefiero pagar en efectivo,IA
+ninguno,No estoy interesado en esta oferta,IA
+ninguno,"No, gracias, quiero pensarlo un poco más",IA
+ninguno,"No, gracias, no necesito ayuda por ahora",IA
+ninguno,"No gracias, ya tengo suficiente información",IA
+ninguno,No quiero suscribirme en este momento,IA
+ninguno,Prefiero no recibir correos promocionales,IA
+ninguno,No guardar mi tarjeta para futuras compras,IA
+ninguno,No permitir el uso de cookies opcionales,IA
+ninguno,Quedarme con funciones básicas,IA
+ninguno,No quiero recibir novedades,IA
+ninguno,Prefiero continuar sin registrarme,IA
+ninguno,"No gracias, me interesa en este momento",IA
+ninguno,Quiero mantener mi configuración actual,IA
+ninguno,Prefiero hacerlo más tarde,IA
+ninguno,No autorizo el uso de cookies opcionales,IA
+ninguno,Prefiero no compartir esta información,IA
+shaming,No quiero mejorar mi productividad,IA
+shaming,Prefiero tirar mi dinero,IA
+shaming,Prefiero seguir perdiendo dinero,IA
+shaming,Prefiero complicarme la vida,IA
+shaming,Prefiero ignorar esta ventaja,IA
+shaming,Prefiero gastar más tiempo,IA
 shaming,No gracias! No me gustan las ofertas,https://github.com/aruneshmathur/dark-patterns/blob/master/data/final-dark-patterns/dark-patterns.csv
 shaming,"No, prefiero pagar el precio completo.",https://github.com/aruneshmathur/dark-patterns/blob/master/data/final-dark-patterns/dark-patterns.csv
 shaming,No me gustan los descuentos,https://github.com/aruneshmathur/dark-patterns/blob/master/data/final-dark-patterns/dark-patterns.csv
