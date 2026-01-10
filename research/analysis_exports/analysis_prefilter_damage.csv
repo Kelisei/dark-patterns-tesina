@@ -1,0 +1,5 @@
+label,total_pos,pos_discarded,discard_rate_on_positives
+fake_urgency,192,0,0.0
+fake_scarcity,77,0,0.0
+shaming,72,0,0.0
+social_proof,222,0,0.0
