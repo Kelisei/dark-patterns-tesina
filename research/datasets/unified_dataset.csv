@@ -100,7 +100,7 @@ fake_urgency,La oferta termina en 71h 59m,duolingo
 fake_urgency,Oferta relámpago de un día,desconocido
 fake_urgency,Ventas flash de fin de smeana,temu
 fake_scarcity,SOLO QUEDAN(N) 3,temu
-fake_urgency,Último día ,temu
+fake_urgency,"Último día ",temu
 fake_urgency,Última oportunidad,spotify
 fake_scarcity,¡Últimas 4 unidades disponibles!,stockcenter
 fake_urgency,Solo quedan 12 horas para obtener 21% de descuento,temu
@@ -205,7 +205,7 @@ ninguno,Tiempo Restante para tu Año Nuevo,Desconocido
 ninguno,Tu contador regresivo para Navidad,Desconocido
 fake_urgency,Oferta de tiempo limitado: Descarga mi libro gratis.,Desconocido
 fake_urgency,Oferta del Día,Desconocido
-ninguno,Token vencé en ,Desconocido
+ninguno,"Token vencé en ",Desconocido
 fake_urgency,Ofertas del día,Desconocido
 fake_urgency,Fijá el precio más bajo,Desconocido
 fake_urgency,El precio sube hasta 469 USD en,Desconocido
@@ -254,7 +254,7 @@ shaming,"No gracias, no me gusta ahorrar dinero",https://github.com/aruneshmathu
 shaming,"No gracias, prefiero un 0% de descuento",https://github.com/aruneshmathur/dark-patterns/blob/master/data/final-dark-patterns/dark-patterns.csv
 shaming,"No gracias, ¡detesto los cupones!",https://github.com/aruneshmathur/dark-patterns/blob/master/data/final-dark-patterns/dark-patterns.csv
 shaming,"No gracias, no me gusta recibir cosas gratis.",https://github.com/aruneshmathur/dark-patterns/blob/master/data/final-dark-patterns/dark-patterns.csv
-shaming,QUIERO PAGAR MÁS TARDE ;),https://github.com/aruneshmathur/dark-patterns/blob/master/data/final-dark-patterns/dark-patterns.csv
+ninguno,Quiero pagar mas tarde,https://github.com/aruneshmathur/dark-patterns/blob/master/data/final-dark-patterns/dark-patterns.csv
 shaming,"No gracias, prefiero pagar el precio total por mis zapatos!",https://github.com/aruneshmathur/dark-patterns/blob/master/data/final-dark-patterns/dark-patterns.csv
 shaming,No deseo proteger mi artículo,https://github.com/aruneshmathur/dark-patterns/blob/master/data/final-dark-patterns/dark-patterns.csv
 shaming,"NO GRACIAS, NO QUIERO AHORRAR DINERO",https://github.com/aruneshmathur/dark-patterns/blob/master/data/final-dark-patterns/dark-patterns.csv
@@ -271,8 +271,6 @@ shaming,"No gracias, no quiero ninguna oferta",https://github.com/aruneshmathur/
 shaming,"No gracias, no quiero software oficial al mejor precio.",https://github.com/aruneshmathur/dark-patterns/blob/master/data/final-dark-patterns/dark-patterns.csv
 shaming,"No gracias, no quiero verme lo mejor posible",https://github.com/aruneshmathur/dark-patterns/blob/master/data/final-dark-patterns/dark-patterns.csv
 shaming,"NO ME GUSTAN LOS REGALOS GRATIS, NO GRACIAS",https://github.com/aruneshmathur/dark-patterns/blob/master/data/final-dark-patterns/dark-patterns.csv
-shaming,Compraré sin descuento,https://github.com/aruneshmathur/dark-patterns/blob/master/data/final-dark-patterns/dark-patterns.csv
-shaming,"No gracias, tengo demasiadas cosas geniales de Glock!",https://github.com/aruneshmathur/dark-patterns/blob/master/data/final-dark-patterns/dark-patterns.csv
 shaming,"No gracias, ¡odio las cosas geniales!",https://github.com/aruneshmathur/dark-patterns/blob/master/data/final-dark-patterns/dark-patterns.csv
 shaming,"No gracias, no me gusta ganar",https://github.com/aruneshmathur/dark-patterns/blob/master/data/final-dark-patterns/dark-patterns.csv
 shaming,"No gracias! Preferiría unirme al club de ""Pagar Precio Completo por las Cosas"".",https://github.com/aruneshmathur/dark-patterns/blob/master/data/final-dark-patterns/dark-patterns.csv
@@ -516,7 +514,7 @@ fake_urgency,Tu pedido está reservado por 09:45 minutos,aruneshmathur_dark_patt
 fake_urgency,Tu pedido está reservado por 08:48 minutos,aruneshmathur_dark_patterns
 fake_urgency,¡APURATE! ¡OFERTA EXCLUSIVA PARA VOS! 1 4 : 4 5,aruneshmathur_dark_patterns
 fake_urgency,00DÍAS02HS14MIN1211SEG,aruneshmathur_dark_patterns
-fake_urgency,Debido a la ALTA demanda, el carrito expira en: 08:41
+fake_urgency,Debido a la ALTA demanda," el carrito expira en: 08:41"
 fake_urgency,¡Apurate! Los precios aumentan en 0 DÍAS 11 HS 59 MIN 55 SEG,aruneshmathur_dark_patterns
 fake_urgency,El carrito expirará en 04:53 minutos,aruneshmathur_dark_patterns
 fake_urgency,Tu pedido está reservado por 09:35 minutos,aruneshmathur_dark_patterns
@@ -555,7 +553,6 @@ fake_urgency,Descuento pendiente $10 OFF 00:30:00,aruneshmathur_dark_patterns
 fake_urgency,Tu pedido será reservado por 6:56 minutos,aruneshmathur_dark_patterns
 fake_urgency,02:06:40 restantes para comprar,aruneshmathur_dark_patterns
 fake_urgency,La venta especial termina en,aruneshmathur_dark_patterns
-fake_urgency,0011Días:0088Horas:4411Minutos:21125445Segundos,aruneshmathur_dark_patterns
 fake_urgency,FLASH 19:15:22,aruneshmathur_dark_patterns
 fake_urgency,02 DÍAS :23 HORAS :00 MIN :54 SEG,aruneshmathur_dark_patterns
 fake_urgency,Por favor realizá tu pedido dentro de: 00:02:41:10,aruneshmathur_dark_patterns
@@ -572,7 +569,7 @@ fake_urgency,Tu pedido está reservado por 09:45 minutos,aruneshmathur_dark_patt
 fake_urgency,Tu pedido está reservado por 08:48 minutos,aruneshmathur_dark_patterns
 fake_urgency,¡APURATE! ¡OFERTA EXCLUSIVA PARA VOS! 1 4 : 4 5,aruneshmathur_dark_patterns
 fake_urgency,00DÍAS02HS14MIN1211SEG,aruneshmathur_dark_patterns
-fake_urgency,Debido a la ALTA demanda, el carrito expira en: 08:41
+fake_urgency,Debido a la ALTA demanda," el carrito expira en: 08:41"
 fake_urgency,¡Apurate! Los precios aumentan en 0 DÍAS 11 HS 59 MIN 55 SEG,aruneshmathur_dark_patterns
 fake_urgency,El carrito expirará en 04:53 minutos,aruneshmathur_dark_patterns
 fake_urgency,Tu pedido está reservado por 09:35 minutos,aruneshmathur_dark_patterns
@@ -632,3 +629,92 @@ fake_urgency,"Apurate, ¡oferta por tiempo limitado! 11:25",aruneshmathur_dark_p
 fake_urgency,Tiempo restante: 04:50,aruneshmathur_dark_patterns
 fake_urgency,Precio garantizado por DÍAS/HS/MIN/SEG,aruneshmathur_dark_patterns
 fake_urgency,Apurate la oferta termina en 9 horas,aruneshmathur_dark_patterns
+ninguno,Buscar en Coursera plus,Coursera
+ninguno,Mostrar 8 más,Coursera
+ninguno,Mostrar 3 más,Milenaria
+ninguno,Mostrar 5 artículos más,Milenaria
+ninguno,Contactanos,Coursera
+ninguno,Descubra soluciones,Coursera
+ninguno,Probalo gratis 30 dias,Canva
+ninguno,Empezar mi prueba por $0,Canva
+ninguno,Empezar a diseñar,Canva
+ninguno,Empezar mi prueba gratis,Canva
+ninguno,Iniciar mi prueba gratis,Canva
+ninguno,más información,Canva
+ninguno,Hablar con ventas,Canva
+ninguno,Validar mi identidad,Canva
+ninguno,Contactanos,Canva
+ninguno,Continuar,Canva
+ninguno,actualizar photoshop,photoshop
+ninguno,agregar al carrito,farmacity
+ninguno,solo web,farmacity
+ninguno,Mis pedidos,farmacity
+ninguno,Ver todos los productos,farmacity
+ninguno,Mostrar todos los articulos,Milenaria
+fake_urgency,¡No te pierdas nuestras mejores ofertas solo para vos!,farmacity
+ninguno,Sofia está en linea para asistirte,farmacity
+ninguno,Maria te ha enviado un mensaje,Milenaria
+ninguno,Recibir notificaciones,Milenaria
+ninguno,Registrarte,Milenaria
+ninguno,Cancelar,Milenaria
+ninguno,Estoy de acuerdo,Roblox
+ninguno,Ignorar,Roblox
+ninguno,"""Duración aproximada: 7 horas",Booking
+ninguno,Disponible a partir del 9 de enero,Booking
+ninguno,"Valoración media 4,4 basada en 1130 comentarios",Booking
+ninguno,Focaccia paso a paso,Sitio de recetas
+ninguno,Tiempo total estimado: 50 min,Sitio de recetas
+ninguno,Rinde 6 porciones,Sitio de recetas
+ninguno,Rapiditas caseras,Sitio de recetas
+ninguno,Preparación en 25 min,Sitio de recetas
+ninguno,Ingredientes para 8 unidades,Sitio de recetas
+ninguno,Risotto paso a paso,Sitio de recetas
+ninguno,Listo en 25 min,Sitio de recetas
+ninguno,Nivel intermedio,Sitio de recetas
+ninguno,7 minutos de lectura,Medio de noticias
+ninguno,Actualizado el 03/01/2024,Medio de noticias
+ninguno,Este artículo es de hace más de 2 meses,Medio de noticias
+ninguno,Clase comienza a las 18:30,Plataforma educativa
+ninguno,Duración total: 90 minutos,Plataforma educativa
+ninguno,Introducción al curso,Plataforma educativa
+ninguno,35 lecciones,Plataforma educativa
+ninguno,12 h 45 min de contenido,Plataforma educativa
+ninguno,Sección 1 de 7,Plataforma educativa
+ninguno,Lección 3,Plataforma educativa
+ninguno,La transmisión inicia a las 21:00,Plataforma educativa
+ninguno,Acceso habilitado para estudiantes,Plataforma educativa
+ninguno,La sesión expira automáticamente si no hay actividad,Sistema
+ninguno,El sistema se desconecta tras 15 minutos,Sistema
+ninguno,El examen comienza a las 08:00,Plataforma educativa
+ninguno,Presentarse 15 minutos antes,Plataforma educativa
+ninguno,"Precio desde ARS 148.344,50",Booking
+ninguno,Impuestos incluidos,Booking
+ninguno,120 resultados encontrados,Sistema
+ninguno,130 comentario,Sistema
+ninguno,Valoración promedio 4.4 / 5,Sistema
+ninguno,Disponible próximamente,Sistema
+ninguno,Contenido no disponible en tu región,Sistema
+ninguno,Colores disponibles: 4,E-commerce
+ninguno,Tamaños disponibles: 6,E-commerce
+ninguno,Pedido confirmado,Sistema
+ninguno,Número de orden: 982341,Sistema
+ninguno,Procesando solicitud,Sistema
+ninguno,Tiempo estimado: 30 segundos,Sistema
+ninguno,Archivo subido correctamente,Sistema
+ninguno,Tamaño: 12 MB,Sistema
+ninguno,Conexión finalizada por inactividad,Sistema
+ninguno,Pantalla bloqueada,Sistema
+ninguno,Intentá nuevamente en 60 segundos,Sistema
+ninguno,Recibes en 10-15 minutos,Pedidos ya
+ninguno,Tu pedido llegará entre las 14:00 y 14:30,Milenaria
+ninguno,Ver más resultados,Pedidos ya
+ninguno,Descubrí la nueva colección,47street
+ninguno,Comprá online en hasta 6 cuotas sin interés,47street
+ninguno,Suscribite a nuestras push notifications,47street
+ninguno,Solicitar información,alevmayorista
+ninguno,Añadir a la lista de deseos,alevmayorista
+ninguno,"Vendió y distribuido por Audible, una compañía de Amazon",amazon
+ninguno,Más opciones de compra,amazon
+ninguno,Aprende más sobre membresía,amazon
+ninguno,Hallazgos rápidos,aliexpress
+ninguno,Vendido por Super Factory Super Disc...(Vendedor),aliexpress
