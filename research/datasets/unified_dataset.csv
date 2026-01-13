@@ -1,7 +1,7 @@
 type,content,source
 fake_urgency,NO CUELGUES! EL SALE TERMINA EN 03:16:29:07 DIAS HS MIN SEG,47street
 fake_urgency,NO CUELGUES! EL SALE TERMINA EN 00:7:35:52 DIAS HS MIN SEG,47street
-fake_scarcity,"¡No te lo pierdas, es el último!",africamia_jeans
+fake_scarcity|fake_urgency,"¡No te lo pierdas, es el último!",africamia_jeans
 fake_scarcity,¡Solo quedan 5 en stock!,africamia_jeans
 social_proof,7 ¡Personas estan viendo este producto ahora!,alevmayorista
 fake_urgency,"La Promo Termina: 8 ene., 04:59 (GMT-3) OFERTAS DE AÑO NUEVO",aliexpress
@@ -403,7 +403,7 @@ social_proof,7 usuarios han mirado este producto en los últimos 6 minutos,https
 social_proof,"Alguien en Clinton, EE. UU. compró un jersey de media cremallera hace 1 minuto",https://github.com/aruneshmathur/dark-patterns/blob/master/data/final-dark-patterns/dark-patterns.csv
 social_proof,12 personas lo compraron recientemente.,https://github.com/aruneshmathur/dark-patterns/blob/master/data/final-dark-patterns/dark-patterns.csv
 social_proof,2 personas están viendo esto,https://github.com/aruneshmathur/dark-patterns/blob/master/data/final-dark-patterns/dark-patterns.csv
-social_proof,Alguien de Airdrie y otros 10,820 compraron este artículo recientemente.
+social_proof,Alguien de Airdrie y otros compraron este artículo recientemente.,https://github.com/aruneshmathur/dark-patterns/blob/master/data/final-dark-patterns/dark-patterns.csv
 social_proof,ESTE PRODUCTO HA SIDO VISTO 480 VECES EN LAS ÚLTIMAS 48 HORAS,https://github.com/aruneshmathur/dark-patterns/blob/master/data/final-dark-patterns/dark-patterns.csv
 social_proof,89 viendo actualmente,https://github.com/aruneshmathur/dark-patterns/blob/master/data/final-dark-patterns/dark-patterns.csv
 social_proof|fake_scarcity,PRODUCTO POPULAR Más de 250 personas están viendo este artículo.,https://github.com/aruneshmathur/dark-patterns/blob/master/data/final-dark-patterns/dark-patterns.csv
@@ -432,7 +432,7 @@ social_proof,Visto 1040 veces en los últimos 7 días,https://github.com/arunesh
 social_proof|fake_scarcity,¡Date prisa! Otras 6 personas tienen este producto en su carrito,https://github.com/aruneshmathur/dark-patterns/blob/master/data/final-dark-patterns/dark-patterns.csv
 social_proof|fake_scarcity,¡Date prisa! Otras 22 personas tienen este producto en su carrito,https://github.com/aruneshmathur/dark-patterns/blob/master/data/final-dark-patterns/dark-patterns.csv
 social_proof,8 personas han visto este producto hoy!,https://github.com/aruneshmathur/dark-patterns/blob/master/data/final-dark-patterns/dark-patterns.csv
-social_proof|fake_scarcity,¡No te lo pierdas! Hemos vendido 38 en los últimos días.,https://github.com/aruneshmathur/dark-patterns/blob/master/data/final-dark-patterns/dark-patterns.csv
+social_proof|fake_urgency,¡No te lo pierdas! Hemos vendido 38 en los últimos días.,https://github.com/aruneshmathur/dark-patterns/blob/master/data/final-dark-patterns/dark-patterns.csv
 social_proof,52 personas están viendo esto ahora mismo.,https://github.com/aruneshmathur/dark-patterns/blob/master/data/final-dark-patterns/dark-patterns.csv
 social_proof,#6 Más vendido en Alfombras. Este artículo fue visto 92 veces ayer.,https://github.com/aruneshmathur/dark-patterns/blob/master/data/final-dark-patterns/dark-patterns.csv
 social_proof,Más de 38 comprados,https://github.com/aruneshmathur/dark-patterns/blob/master/data/final-dark-patterns/dark-patterns.csv
@@ -469,52 +469,51 @@ social_proof,12 clientes vieron este producto hoy!,https://github.com/aruneshmat
 social_proof,6 clientes tienen esto en su cesta,https://github.com/aruneshmathur/dark-patterns/blob/master/data/final-dark-patterns/dark-patterns.csv
 social_proof|fake_scarcity,¡Se vende rápido! Añadido a la bolsa 7 veces en las últimas 48 horas.,https://github.com/aruneshmathur/dark-patterns/blob/master/data/final-dark-patterns/dark-patterns.csv
 social_proof,228 personas han visto este producto recientemente!,https://github.com/aruneshmathur/dark-patterns/blob/master/data/final-dark-patterns/dark-patterns.csv
-social_proof,Otras 3 personas están viendo este artículo actualmente.,https://github.com/aruneshmathur/dark-patterns/blob/master/data/final-dark-patterns/dark-patterns.csv
-social_proof,Otros 2 clientes lo tienen en su carrito.,https://github.com/aruneshmathur/dark-patterns/blob/master/data/final-dark-patterns/dark-patterns.csv
-social_proof,1044 vendidos en los últimos 12 meses,https://github.com/aruneshmathur/dark-patterns/blob/master/data/final-dark-patterns/dark-patterns.csv
-social_proof,2 clientes lo compraron recientemente,https://github.com/aruneshmathur/dark-patterns/blob/master/data/final-dark-patterns/dark-patterns.csv
-social_proof,2 PERSONAS HAN AÑADIDO ESTE ARTÍCULO A SU CARRITO HOY,https://github.com/aruneshmathur/dark-patterns/blob/master/data/final-dark-patterns/dark-patterns.csv
-social_proof,2+ personas acaban de ver este producto,https://github.com/aruneshmathur/dark-patterns/blob/master/data/final-dark-patterns/dark-patterns.csv
-social_proof,Más de 238 personas han comprado este producto,https://github.com/aruneshmathur/dark-patterns/blob/master/data/final-dark-patterns/dark-patterns.csv
-social_proof,994 artículos vendidos esta hora.,https://github.com/aruneshmathur/dark-patterns/blob/master/data/final-dark-patterns/dark-patterns.csv
-social_proof,52 personas han añadido este producto a la bolsa en las últimas 72 horas,https://github.com/aruneshmathur/dark-patterns/blob/master/data/final-dark-patterns/dark-patterns.csv
-social_proof,4 comprados en las últimas 24 horas.,https://github.com/aruneshmathur/dark-patterns/blob/master/data/final-dark-patterns/dark-patterns.csv
-social_proof,137 usuarios están actualmente activos en nuestro sitio web,https://github.com/aruneshmathur/dark-patterns/blob/master/data/final-dark-patterns/dark-patterns.csv
-social_proof,4 personas están viendo esto ahora mismo.,https://github.com/aruneshmathur/dark-patterns/blob/master/data/final-dark-patterns/dark-patterns.csv
-social_proof,41 personas han mirado esto en las últimas horas,https://github.com/aruneshmathur/dark-patterns/blob/master/data/final-dark-patterns/dark-patterns.csv
-social_proof,¡Otros 6 ya han comprado esta oferta hoy!,https://github.com/aruneshmathur/dark-patterns/blob/master/data/final-dark-patterns/dark-patterns.csv
-social_proof,¡232 personas están viendo esta oferta!,https://github.com/aruneshmathur/dark-patterns/blob/master/data/final-dark-patterns/dark-patterns.csv
-social_proof,436 usuarios están activos ahora mismo,https://github.com/aruneshmathur/dark-patterns/blob/master/data/final-dark-patterns/dark-patterns.csv
-social_proof,39 personas tienen esto en su carrito,https://github.com/aruneshmathur/dark-patterns/blob/master/data/final-dark-patterns/dark-patterns.csv
-fake_scarcity,¡Se vende rápido!,[https://github.com/aruneshmathur/dark-patterns/blob/master/data/final-dark-patterns/dark-patterns.csv](https://github.com/aruneshmathur/dark-patterns/blob/master/data/final-dark-patterns/dark-patterns.csv)
-fake_scarcity,¡Se agotará pronto!,[https://github.com/aruneshmathur/dark-patterns/blob/master/data/final-dark-patterns/dark-patterns.csv](https://github.com/aruneshmathur/dark-patterns/blob/master/data/final-dark-patterns/dark-patterns.csv)
-fake_scarcity,¡Fuerte demanda! ¡Completa tu pedido antes de que sea demasiado tarde!,[https://github.com/aruneshmathur/dark-patterns/blob/master/data/final-dark-patterns/dark-patterns.csv](https://github.com/aruneshmathur/dark-patterns/blob/master/data/final-dark-patterns/dark-patterns.csv)
-fake_scarcity,"Un artículo que pediste tiene mucha demanda. No te preocupes, hemos reservado tu pedido.",[https://github.com/aruneshmathur/dark-patterns/blob/master/data/final-dark-patterns/dark-patterns.csv](https://github.com/aruneshmathur/dark-patterns/blob/master/data/final-dark-patterns/dark-patterns.csv)
-fake_scarcity,Los artículos en tu carrito tienen una demanda MUY alta.,[https://github.com/aruneshmathur/dark-patterns/blob/master/data/final-dark-patterns/dark-patterns.csv](https://github.com/aruneshmathur/dark-patterns/blob/master/data/final-dark-patterns/dark-patterns.csv)
-fake_scarcity,Los artículos en tu carrito tienen mucha demanda.,[https://github.com/aruneshmathur/dark-patterns/blob/master/data/final-dark-patterns/dark-patterns.csv](https://github.com/aruneshmathur/dark-patterns/blob/master/data/final-dark-patterns/dark-patterns.csv)
-fake_scarcity,Demanda extremadamente alta: espera de 2 a 4 semanas para que llegue (por las dudas). Límite de 4 por persona!,[https://github.com/aruneshmathur/dark-patterns/blob/master/data/final-dark-patterns/dark-patterns.csv](https://github.com/aruneshmathur/dark-patterns/blob/master/data/final-dark-patterns/dark-patterns.csv)
-fake_scarcity,Alta demanda,[https://github.com/aruneshmathur/dark-patterns/blob/master/data/final-dark-patterns/dark-patterns.csv](https://github.com/aruneshmathur/dark-patterns/blob/master/data/final-dark-patterns/dark-patterns.csv)
-fake_scarcity,ALTA DEMANDA,[https://github.com/aruneshmathur/dark-patterns/blob/master/data/final-dark-patterns/dark-patterns.csv](https://github.com/aruneshmathur/dark-patterns/blob/master/data/final-dark-patterns/dark-patterns.csv)
-fake_scarcity,"Un artículo que pediste tiene mucha demanda. No te preocupes, hemos priorizado tu pedido.",[https://github.com/aruneshmathur/dark-patterns/blob/master/data/final-dark-patterns/dark-patterns.csv](https://github.com/aruneshmathur/dark-patterns/blob/master/data/final-dark-patterns/dark-patterns.csv)
-fake_scarcity,Este artículo tiene mucha demanda.,[https://github.com/aruneshmathur/dark-patterns/blob/master/data/final-dark-patterns/dark-patterns.csv](https://github.com/aruneshmathur/dark-patterns/blob/master/data/final-dark-patterns/dark-patterns.csv)
-fake_scarcity,"Lo sentimos, esto está agotado. Te lo acabas de perder.",[https://github.com/aruneshmathur/dark-patterns/blob/master/data/final-dark-patterns/dark-patterns.csv](https://github.com/aruneshmathur/dark-patterns/blob/master/data/final-dark-patterns/dark-patterns.csv)
-fake_scarcity,Los artículos en tu carrito se están vendiendo rápido,[https://github.com/aruneshmathur/dark-patterns/blob/master/data/final-dark-patterns/dark-patterns.csv](https://github.com/aruneshmathur/dark-patterns/blob/master/data/final-dark-patterns/dark-patterns.csv)
-fake_scarcity,Los artículos en tu carrito tienen mucha demanda. Pero hemos reservado tu pedido.,[https://github.com/aruneshmathur/dark-patterns/blob/master/data/final-dark-patterns/dark-patterns.csv](https://github.com/aruneshmathur/dark-patterns/blob/master/data/final-dark-patterns/dark-patterns.csv)
-fake_scarcity,UNA VEZ QUE SE AGOTE SE ACABÓ,[https://github.com/aruneshmathur/dark-patterns/blob/master/data/final-dark-patterns/dark-patterns.csv](https://github.com/aruneshmathur/dark-patterns/blob/master/data/final-dark-patterns/dark-patterns.csv)
-fake_urgency|fake_scarcity,¡SE VENDE RÁPIDO! OBTÉN UN 10% DE DESCUENTO EN ESTE ARTÍCULO. ACTÍVALO AHORA.,[https://github.com/aruneshmathur/dark-patterns/blob/master/data/final-dark-patterns/dark-patterns.csv](https://github.com/aruneshmathur/dark-patterns/blob/master/data/final-dark-patterns/dark-patterns.csv)
-fake_scarcity,"Nuestros artículos se venden rápido, ¡no te lo pierdas!",[https://github.com/aruneshmathur/dark-patterns/blob/master/data/final-dark-patterns/dark-patterns.csv](https://github.com/aruneshmathur/dark-patterns/blob/master/data/final-dark-patterns/dark-patterns.csv)
-fake_scarcity,UN ARTÍCULO EN TU CARRITO SE ESTÁ AGOTANDO RÁPIDAMENTE,[https://github.com/aruneshmathur/dark-patterns/blob/master/data/final-dark-patterns/dark-patterns.csv](https://github.com/aruneshmathur/dark-patterns/blob/master/data/final-dark-patterns/dark-patterns.csv)
-fake_scarcity,¡EN ALTA DEMANDA!,[https://github.com/aruneshmathur/dark-patterns/blob/master/data/final-dark-patterns/dark-patterns.csv](https://github.com/aruneshmathur/dark-patterns/blob/master/data/final-dark-patterns/dark-patterns.csv)
-fake_scarcity,En demanda,[https://github.com/aruneshmathur/dark-patterns/blob/master/data/final-dark-patterns/dark-patterns.csv](https://github.com/aruneshmathur/dark-patterns/blob/master/data/final-dark-patterns/dark-patterns.csv)
-fake_urgency|fake_scarcity,"Debido a la ALTA demanda, el carrito expira en: 08:41",https://github.com/aruneshmathur/dark-patterns/blob/master/data/final-dark-patterns/dark-patterns.csv](https://github.com/aruneshmathur/dark-patterns/blob/master/data/final-dark-patterns/dark-patterns.csv
-fake_scarcity,Vendiéndose rápido,[https://github.com/aruneshmathur/dark-patterns/blob/master/data/final-dark-patterns/dark-patterns.csv](https://github.com/aruneshmathur/dark-patterns/blob/master/data/final-dark-patterns/dark-patterns.csv)
-fake_urgency|fake_scarcity,"¡Date prisa, este estilo se vende rápido!",[https://github.com/aruneshmathur/dark-patterns/blob/master/data/final-dark-patterns/dark-patterns.csv](https://github.com/aruneshmathur/dark-patterns/blob/master/data/final-dark-patterns/dark-patterns.csv)
+social_proof,Otras 3 personas están viendo este artículo actualmente.,aruneshmathur_dark_patterns
+social_proof,Otros 2 clientes lo tienen en su carrito.,aruneshmathur_dark_patterns
+social_proof,1044 vendidos en los últimos 12 meses,aruneshmathur_dark_patterns
+social_proof,2 clientes lo compraron recientemente,aruneshmathur_dark_patterns
+social_proof,2 PERSONAS HAN AÑADIDO ESTE ARTÍCULO A SU CARRITO HOY,aruneshmathur_dark_patterns
+social_proof,2+ personas acaban de ver este producto,aruneshmathur_dark_patterns
+social_proof,Más de 238 personas han comprado este producto,aruneshmathur_dark_patterns
+social_proof,994 artículos vendidos esta hora.,aruneshmathur_dark_patterns
+social_proof,52 personas han añadido este producto a la bolsa en las últimas 72 horas,aruneshmathur_dark_patterns
+social_proof,4 comprados en las últimas 24 horas.,aruneshmathur_dark_patterns
+social_proof,137 usuarios están actualmente activos en nuestro sitio web,aruneshmathur_dark_patterns
+social_proof,4 personas están viendo esto ahora mismo.,aruneshmathur_dark_patterns
+social_proof,41 personas han mirado esto en las últimas horas,aruneshmathur_dark_patterns
+social_proof,¡Otros 6 ya han comprado esta oferta hoy!,aruneshmathur_dark_patterns
+social_proof,¡232 personas están viendo esta oferta!,aruneshmathur_dark_patterns
+social_proof,436 usuarios están activos ahora mismo,aruneshmathur_dark_patterns
+social_proof,39 personas tienen esto en su carrito,aruneshmathur_dark_patterns
+fake_scarcity,¡Se vende rápido!,aruneshmathur_dark_patterns
+fake_scarcity,¡Se agotará pronto!,aruneshmathur_dark_patterns
+fake_scarcity,¡Fuerte demanda! ¡Completa tu pedido antes de que sea demasiado tarde!,aruneshmathur_dark_patterns
+fake_scarcity,"Un artículo que pediste tiene mucha demanda. No te preocupes, hemos reservado tu pedido.",aruneshmathur_dark_patterns
+fake_scarcity,Los artículos en tu carrito tienen una demanda MUY alta.,aruneshmathur_dark_patterns
+fake_scarcity,Los artículos en tu carrito tienen mucha demanda.,aruneshmathur_dark_patterns
+fake_scarcity,Demanda extremadamente alta: espera de 2 a 4 semanas para que llegue (por las dudas). Límite de 4 por persona!,aruneshmathur_dark_patterns
+fake_scarcity,Alta demanda,aruneshmathur_dark_patterns
+fake_scarcity,ALTA DEMANDA,aruneshmathur_dark_patterns
+fake_scarcity,"Un artículo que pediste tiene mucha demanda. No te preocupes, hemos priorizado tu pedido.",aruneshmathur_dark_patterns
+fake_scarcity,Este artículo tiene mucha demanda.,aruneshmathur_dark_patterns
+fake_scarcity,"Lo sentimos, esto está agotado. Te lo acabas de perder.",aruneshmathur_dark_patterns
+fake_scarcity,Los artículos en tu carrito se están vendiendo rápido,aruneshmathur_dark_patterns
+fake_scarcity,Los artículos en tu carrito tienen mucha demanda. Pero hemos reservado tu pedido.,aruneshmathur_dark_patterns
+fake_scarcity,UNA VEZ QUE SE AGOTE SE ACABÓ,aruneshmathur_dark_patterns
+fake_urgency|fake_scarcity,¡SE VENDE RÁPIDO! OBTÉN UN 10% DE DESCUENTO EN ESTE ARTÍCULO. ACTÍVALO AHORA.,aruneshmathur_dark_patterns
+fake_scarcity,"Nuestros artículos se venden rápido, ¡no te lo pierdas!",aruneshmathur_dark_patterns
+fake_scarcity,UN ARTÍCULO EN TU CARRITO SE ESTÁ AGOTANDO RÁPIDAMENTE,aruneshmathur_dark_patterns
+fake_scarcity,¡EN ALTA DEMANDA!,aruneshmathur_dark_patterns
+fake_scarcity,En demanda,aruneshmathur_dark_patterns
+fake_scarcity,Vendiéndose rápido,aruneshmathur_dark_patterns
+fake_urgency|fake_scarcity,"¡Date prisa, este estilo se vende rápido!",aruneshmathur_dark_patterns
 fake_urgency,11 11 horas: 00 22 minutos: 3223 3223 segundos La oferta termina cuando el contador llega a cero,aruneshmathur_dark_patterns
 fake_urgency,Tu pedido está reservado por 09:45 minutos,aruneshmathur_dark_patterns
 fake_urgency,Tu pedido está reservado por 08:48 minutos,aruneshmathur_dark_patterns
 fake_urgency,¡APURATE! ¡OFERTA EXCLUSIVA PARA VOS! 1 4 : 4 5,aruneshmathur_dark_patterns
 fake_urgency,00DÍAS02HS14MIN1211SEG,aruneshmathur_dark_patterns
-fake_urgency,Debido a la ALTA demanda," el carrito expira en: 08:41"
+fake_urgency|fake_scarcity,Debido a la ALTA demanda el carrito expira en: 08:41,aruneshmathur_dark_patterns
 fake_urgency,¡Apurate! Los precios aumentan en 0 DÍAS 11 HS 59 MIN 55 SEG,aruneshmathur_dark_patterns
 fake_urgency,El carrito expirará en 04:53 minutos,aruneshmathur_dark_patterns
 fake_urgency,Tu pedido está reservado por 09:35 minutos,aruneshmathur_dark_patterns
@@ -718,3 +717,33 @@ ninguno,Más opciones de compra,amazon
 ninguno,Aprende más sobre membresía,amazon
 ninguno,Hallazgos rápidos,aliexpress
 ninguno,Vendido por Super Factory Super Disc...(Vendedor),aliexpress
+fake_scarcity,¡Últimas 3 unidades disponibles!,IA
+fake_scarcity,Queda solo 1 en stock,IA
+fake_scarcity,Últimas 2 plazas disponibles para este curso,IA
+fake_scarcity,Solo quedan 4 cupos disponibles,IA
+fake_scarcity,Stock bajo: quedan 5 unidades,IA
+fake_scarcity,Última habitación disponible a este precio,IA
+fake_scarcity,Quedan 2 habitaciones disponibles,IA
+fake_scarcity,Solo queda 1 artículo en inventario,IA
+fake_scarcity,Disponibles únicamente 3 unidades más,IA
+fake_scarcity,Se agota rápido: quedan 2 unidades,IA
+fake_scarcity,Últimos 5 lugares para inscribirte,IA
+fake_scarcity,Producto casi agotado: 1 unidad restante,IA
+fake_scarcity,Quedan pocos ejemplares en stock (3),IA
+fake_scarcity,Última unidad disponible en este talle,IA
+fake_scarcity,Solo quedan 2 productos en stock ahora,IA
+fake_urgency,Último día para aprovechar esta oferta,IA
+fake_urgency,Última oportunidad para obtener el descuento,IA
+fake_urgency,Solo hoy con precios especiales,IA
+fake_urgency,La promoción finaliza hoy,IA
+fake_urgency,Últimas horas de la oferta,IA
+fake_urgency,Apurate  la oferta termina pronto,IA
+fake_urgency,Esta promo se termina hoy mismo,IA
+fake_urgency,No te lo pierdas  termina hoy,IA
+fake_urgency,Última oportunidad de compra con descuento,IA
+fake_urgency,Oferta válida únicamente por hoy,IA
+fake_urgency,Quedan pocas horas para aprovecharlo,IA
+fake_urgency,El descuento expira hoy,IA
+fake_urgency,Promo especial por tiempo limitado,IA
+fake_urgency,Último día de descuentos exclusivos,IA
+fake_urgency,Aprovechá ahora antes de que termine,IA
