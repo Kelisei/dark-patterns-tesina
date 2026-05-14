@@ -1,140 +1,166 @@
-from flask import Flask, request
+from flask import Flask, request, jsonify
 from flask_cors import CORS
-
-from src.scarcity.scarcity import check_text_scarcity_schema
-from src.scarcity.types import ScarcityRequestSchema
-from src.shaming.my_types import ShamingSchema, ShamingResponse
-from src.shaming.shaming import check_text_shaming, check_text_shaming_nopath
-from src.urgency.types import UrgencyRequestSchema
-from src.urgency.urgency import check_text_urgency_schema
+import traceback
 
 app = Flask(__name__)
 CORS(app)
 
+# Fallbacks for specific endpoints using the unified predictor
+
+
+def _get_predictions(texts):
+    from src.predictor.ml_predictor import get_predictor
+
+    predictor = get_predictor()
+    return predictor.predict(texts)
+
+
 @app.post("/scarcity")
 def detect_scarcity():
-    """
-    Detecta patrones de escasez en los textos recibidos mediante una solicitud POST.
+    try:
+        json_data = request.get_json()
+        texts_info = json_data.get("texts", [])
 
-    Este endpoint recibe un JSON que sigue el esquema `ScarcityRequestSchema`, 
-    válida los datos y devuelve un JSON con el resultado siguiendo el esquema `ScarcityResponseSchema`.
+        raw_texts = [item.get("text", "") for item in texts_info]
+        if not raw_texts:
+            return {"version": "1.0", "instances": []}
 
-    JSON de entrada (ejemplo):
-    {
-        "version": "1.0",
-        "texts": [
-            {
-                "text": "¡Solo quedan 3 unidades!",
-                "path": "/producto/123",
-                "id": "e1"
-            },
-            {
-                "text": "Oferta limitada",
-                "path": "/promociones/oferta"
-            }
-        ]
-    }
+        predictions = _get_predictions(raw_texts)
 
-    JSON de salida (ejemplo):
-    {
-        "version": "1.0",
-        "instances": [
-            {
-                "text": "¡Solo quedan 3 unidades!",
-                "path": "/producto/123",
-                "id": "e1",
-                "has_scarcity": true
-            },
-            {
-                "text": "Oferta limitada",
-                "path": "/promociones/oferta",
-                "has_scarcity": false
-            }
-        ]
-    }
+        instances = []
+        for i, item in enumerate(texts_info):
+            pred = predictions[i]
+            # Verify if 'fake_scarcity' is in the labels list
+            has_scarcity = "fake_scarcity" in pred["labels"]
 
-    Retorna:
-        dict: Diccionario serializado que indica para cada texto si se detecta escasez.
-    """
-    json_data = ScarcityRequestSchema().load(request.get_json())
-    return check_text_scarcity_schema(json_data)
+            instances.append(
+                {
+                    "text": item.get("text", ""),
+                    "path": item.get("path", ""),
+                    "id": item.get("id", ""),
+                    "has_scarcity": has_scarcity,
+                }
+            )
 
-
-
-@app.post("/shaming")
-def detect_shaming():
-    """
-    Detecta patrones de 'shaming' en los datos recibidos mediante una solicitud POST.
-
-    Esta función maneja la ruta '/shaming' y procesa los datos JSON enviados en la solicitud.
-    Dependiendo de la versión especificada en el JSON, utiliza diferentes métodos para analizar los textos:
-
-    - Si la versión es distinta de "0.2", itera sobre los tokens recibidos y utiliza la función `check_text_shaming`
-        para detectar patrones de shaming en cada texto, devolviendo una lista de resultados.
-    - Si la versión es "0.2", válida y deserialize los datos usando `ShamingSchema`, luego procesa los textos con
-        `check_text_shaming_path` y devuelve la respuesta serializada con `ShamingResponse`.
-
-    Returns:
-        list o dict: Resultados del análisis de shaming, dependiendo de la versión del esquema recibido.
-    """
-    json_data = request.get_json()
-    if json_data.get("Version", "0.1") != "0.2":
-        sentences = []
-        tokens = request.get_json().get("tokens")
-        for token in tokens:
-            sentences.extend(check_text_shaming(token["text"], token["path"]))
-        return sentences
-    else:
-        schema = ShamingSchema()
-        data = schema.load(json_data)
-        response_schema = ShamingResponse()
-        return response_schema.dump(check_text_shaming_nopath(data))
-
+        return {"version": "1.0", "instances": instances}
+    except Exception as e:
+        traceback.print_exc()
+        return {"error": str(e)}, 500
 
 
 @app.post("/urgency")
 def detect_urgency():
-    """
-    Detecta patrones de urgencia en los textos recibidos mediante una solicitud POST.
+    try:
+        json_data = request.get_json()
+        texts_info = json_data.get("texts", [])
 
-    Este endpoint recibe un JSON que sigue el esquema `UrgencyRequestSchema`, 
-    válida los datos y devuelve un JSON con el resultado siguiendo el esquema `UrgencyResponseSchema`.
+        raw_texts = [item.get("text", "") for item in texts_info]
+        if not raw_texts:
+            return {"version": "1.0", "urgency_instances": []}
 
-    JSON de entrada (ejemplo):
-    {
-        "version": "1.0",
-        "texts": [
-            {
-                "text": "¡Compra ahora, promoción válida solo hoy!",
-                "path": "/promociones/día",
-                "id": "u1"
-            },
-            {
-                "text": "Entrega inmediata disponible"
-            }
-        ]
-    }
+        predictions = _get_predictions(raw_texts)
 
-    JSON de salida (ejemplo):
-    {
-        "version": "1.0",
-        "urgency_instances": [
-            {
-                "text": "¡Compra ahora, promoción válida solo hoy!",
-                "path": "/promociones/día",
-                "id": "u1",
-                "has_urgency": true
-            },
-            {
-                "text": "Entrega inmediata disponible",
-                "has_urgency": false
-            }
-        ]
-    }
+        instances = []
+        for i, item in enumerate(texts_info):
+            pred = predictions[i]
+            # Verify if 'fake_urgency' is in the labels list
+            has_urgency = "fake_urgency" in pred["labels"]
 
-    Retorna:
-        dict: Diccionario serializado que indica para cada texto si se detecta urgencia.
-    """
-    json_data = UrgencyRequestSchema().load(request.get_json())
-    return check_text_urgency_schema(json_data)
+            instances.append(
+                {
+                    "text": item.get("text", ""),
+                    "path": item.get("path", ""),
+                    "id": item.get("id", ""),
+                    "has_urgency": has_urgency,
+                }
+            )
 
+        return {"version": "1.0", "urgency_instances": instances}
+    except Exception as e:
+        traceback.print_exc()
+        return {"error": str(e)}, 500
+
+
+@app.post("/shaming")
+def detect_shaming():
+    try:
+        json_data = request.get_json()
+        sentences = []
+
+        # Determine the format based on Version
+        if json_data.get("Version", "0.1") != "0.2":
+            tokens = json_data.get("tokens", [])
+            raw_texts = [t.get("text", "") for t in tokens]
+
+            # Use ML model instead of old functions
+            if raw_texts:
+                predictions = _get_predictions(raw_texts)
+                for i, token in enumerate(tokens):
+                    if "shaming" in predictions[i]["labels"]:
+                        # Old shaming script appended a dict with text and path per detected
+                        sentences.append(
+                            {
+                                "text": token.get("text", ""),
+                                "path": token.get("path", ""),
+                                "id": token.get("id", ""),
+                            }
+                        )
+            return jsonify(sentences)
+        else:
+            # Handles V0.2 logic if ever used
+            data = json_data.get("texts", [])
+            raw_texts = [t.get("text", "") for t in data]
+
+            instances = []
+            if raw_texts:
+                predictions = _get_predictions(raw_texts)
+                for i, t in enumerate(data):
+                    instances.append(
+                        {
+                            "text": t.get("text", ""),
+                            "path": t.get("path", ""),
+                            "id": t.get("id", ""),
+                            "has_shaming": "shaming" in predictions[i]["labels"],
+                        }
+                    )
+            return {"version": "0.2", "instances": instances}
+    except Exception as e:
+        traceback.print_exc()
+        return {"error": str(e)}, 500
+
+
+@app.post("/detect")
+def detect_dark_patterns():
+    try:
+        json_data = request.get_json()
+        texts_info = json_data.get("texts", [])
+
+        if not texts_info:
+            texts_info = json_data.get("tokens", [])
+            if not texts_info:
+                return {"version": "1.0", "instances": []}
+
+        raw_texts = [item.get("text", "") for item in texts_info]
+        predictions = _get_predictions(raw_texts)
+
+        instances = []
+        for i, item in enumerate(texts_info):
+            pred = predictions[i]
+            instances.append(
+                {
+                    "text": item.get("text", ""),
+                    "path": item.get("path", ""),
+                    "id": item.get("id", ""),
+                    "detected": pred["detected"],
+                    "labels": pred["labels"],
+                }
+            )
+
+        return {"version": "1.0", "instances": instances}
+    except Exception as e:
+        traceback.print_exc()
+        return {"error": str(e)}, 500
+
+
+if __name__ == "__main__":
+    app.run(debug=True, port=5000)

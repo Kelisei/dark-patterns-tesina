@@ -746,4 +746,5 @@ fake_urgency,Quedan pocas horas para aprovecharlo,IA
 fake_urgency,El descuento expira hoy,IA
 fake_urgency,Promo especial por tiempo limitado,IA
 fake_urgency,Último día de descuentos exclusivos,IA
-fake_urgency,Aprovechá ahora antes de que termine,IA
+shaming,"Sí, me voy a hacer cargo de los gastos que surjan",roomio_checkout
+shaming,"Yes, I will take care of any expenses that may be incurred",roomio_checkout
