@@ -463,6 +463,10 @@ class DarkPatternPredictor:
         self.pipeline = artifact["pipeline"]
         self.thresholds = artifact["thresholds"]
         self.labels = artifact["labels"]
+        if "shaming" in self.labels:
+            shaming_idx = self.labels.index("shaming")
+            self.thresholds[shaming_idx] = 0.6
+
 
     def predict(self, texts, use_prefilter=True):
         if isinstance(texts, str):

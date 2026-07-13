@@ -5,6 +5,11 @@ import traceback
 app = Flask(__name__)
 CORS(app)
 
+@app.route("/ping", methods=["GET"])
+def ping():
+    return {"status": "ok"}
+
+
 # Fallbacks for specific endpoints using the unified predictor
 
 
