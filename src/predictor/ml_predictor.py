@@ -264,7 +264,15 @@ SAFE_FILTER_TERMS = [
 ]
 phrase_matcher.add("SAFE_FILTERS", [nlp.make_doc(t) for t in SAFE_FILTER_TERMS])
 
-SAFE_UI_TERMS = ["total", "subtotal", "impuesto", "impuestos", "tarifa", "precio"]
+SAFE_UI_TERMS = [
+    "total", "subtotal", "impuesto", "impuestos", "tarifa", "precio",
+    "código", "cvv", "código (cvv)", "tarjeta", "tarjetas", 
+    "número de tarjeta", "vencimiento", "débito", "crédito",
+    "no seleccionada", "seleccionar", "seleccione", "selección",
+    "opción", "opciones", "método de pago", "pago", "correo", 
+    "email", "contraseña", "usuario", "login", "ingresar", 
+    "registrarse", "nombre", "apellido", "dni", "documento", "teléfono"
+]
 
 SAFE_FEATURE_TERMS = [
     "cobertura",
