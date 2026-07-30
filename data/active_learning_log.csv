@@ -1,0 +1,21 @@
+timestamp,text,ambiguous_labels,probabilities
+2026-07-30T19:30:53.425907,Último,fake_urgency,0.459
+2026-07-30T19:30:53.986614,Quiero aprender SEO,shaming,0.519
+2026-07-30T19:30:54.004402,"No, lo quiero devolver",shaming,0.495
+2026-07-30T19:30:54.012326,Descubrirlo ahora,fake_urgency,0.547
+2026-07-30T19:30:54.043434,"Si, me quiero registrar",shaming,0.467
+2026-07-30T19:30:54.336631,No estoy interesado en esta oferta,shaming,0.455
+2026-07-30T19:30:54.367261,No quiero recibir novedades,shaming,0.491
+2026-07-30T19:30:54.374748,Quiero mantener mi configuración actual,shaming,0.462
+2026-07-30T19:30:54.855048,273 unidades vendidas en los últimos 30 días,fake_scarcity,0.479
+2026-07-30T19:30:55.416584,¡No te lo pierdas! Hemos vendido 38 en los últimos días.,fake_urgency,0.537
+2026-07-30T19:30:55.489900,EL MÁS POPULAR,social_proof,0.479
+2026-07-30T19:30:55.569443,135 personas tienen esto en su carrito,fake_scarcity,0.497
+2026-07-30T19:30:55.735544,39 personas tienen esto en su carrito,fake_scarcity,0.497
+2026-07-30T19:30:55.877643,"¡Date prisa, este estilo se vende rápido!",fake_urgency,0.538
+2026-07-30T19:30:56.234117,Debido a la ALTA demanda,fake_urgency,0.548
+2026-07-30T19:30:56.545968,Actualizado el 03/01/2024,fake_urgency,0.458
+2026-07-30T19:30:56.605560,La transmisión inicia a las 21:00,fake_urgency,0.452
+2026-07-30T19:30:56.966874,No te lo pierdas  termina hoy,fake_scarcity,0.525
+2026-07-30T19:30:56.984788,Quedan pocas horas para aprovecharlo,fake_scarcity,0.503
+2026-07-30T19:30:57.038809,Finalizar experimento,fake_urgency,0.460

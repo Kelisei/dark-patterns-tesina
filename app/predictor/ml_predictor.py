@@ -1,8 +1,9 @@
+import os
 import re
+
 import joblib
 import spacy
 from spacy.matcher import Matcher, PhraseMatcher
-import os
 
 nlp = spacy.load("es_core_news_sm")
 
@@ -265,13 +266,41 @@ SAFE_FILTER_TERMS = [
 phrase_matcher.add("SAFE_FILTERS", [nlp.make_doc(t) for t in SAFE_FILTER_TERMS])
 
 SAFE_UI_TERMS = [
-    "total", "subtotal", "impuesto", "impuestos", "tarifa", "precio",
-    "código", "cvv", "código (cvv)", "tarjeta", "tarjetas", 
-    "número de tarjeta", "vencimiento", "débito", "crédito",
-    "no seleccionada", "seleccionar", "seleccione", "selección",
-    "opción", "opciones", "método de pago", "pago", "correo", 
-    "email", "contraseña", "usuario", "login", "ingresar", 
-    "registrarse", "nombre", "apellido", "dni", "documento", "teléfono"
+    "total",
+    "subtotal",
+    "impuesto",
+    "impuestos",
+    "tarifa",
+    "precio",
+    "código",
+    "cvv",
+    "código (cvv)",
+    "tarjeta",
+    "tarjetas",
+    "número de tarjeta",
+    "vencimiento",
+    "débito",
+    "crédito",
+    "no seleccionada",
+    "seleccionar",
+    "seleccione",
+    "selección",
+    "opción",
+    "opciones",
+    "método de pago",
+    "pago",
+    "correo",
+    "email",
+    "contraseña",
+    "usuario",
+    "login",
+    "ingresar",
+    "registrarse",
+    "nombre",
+    "apellido",
+    "dni",
+    "documento",
+    "teléfono",
 ]
 
 SAFE_FEATURE_TERMS = [
@@ -381,9 +410,12 @@ def check_full_text_match(doc, label_prefixes):
     last_token = non_space_tokens[-1]
     for match_id, start, end in matches:
         lab = nlp.vocab.strings[match_id]
-        if any(lab.startswith(p) for p in label_prefixes):
-            if start <= first_token and end > last_token:
-                return True
+        if (
+            any(lab.startswith(p) for p in label_prefixes)
+            and start <= first_token
+            and end > last_token
+        ):
+            return True
     return False
 
 
@@ -405,10 +437,7 @@ def is_safe_non_pattern(text: str) -> bool:
         for mid, _, _ in pm
     )
 
-    if has_safe_ui:
-        return True
-
-    return False
+    return bool(has_safe_ui)
 
 
 def is_anti_dark_fp(text: str) -> bool:
@@ -426,17 +455,23 @@ def is_anti_dark_fp(text: str) -> bool:
     if has_event and has_start:
         return True
 
-    if has_start and " en " in text_lower:
-        if re_in_time.search(text_lower) or re_clock.search(text_lower):
-            return True
+    if (
+        has_start
+        and " en " in text_lower
+        and (re_in_time.search(text_lower) or re_clock.search(text_lower))
+    ):
+        return True
 
-    if has_tech and has_end:
-        if (
+    if (
+        has_tech
+        and has_end
+        and (
             re_in_time.search(text_lower)
             or re_clock.search(text_lower)
             or " en " in text_lower
-        ):
-            return True
+        )
+    ):
+        return True
 
     return False
 
@@ -457,8 +492,14 @@ def prefilter_to_none(text: str) -> bool:
     return is_anti_dark_fp(t) or is_safe_non_pattern(t)
 
 
+import functools
+from app.core.config import settings
+
 class DarkPatternPredictor:
-    def __init__(self, model_path="dark_pattern_model.joblib"):
+    def __init__(self, model_path: str | None = None) -> None:
+        if model_path is None:
+            model_path = settings.model_path
+            
         path = os.path.join(
             os.path.dirname(os.path.dirname(os.path.dirname(__file__))), model_path
         )
@@ -474,38 +515,71 @@ class DarkPatternPredictor:
         if "shaming" in self.labels:
             shaming_idx = self.labels.index("shaming")
             self.thresholds[shaming_idx] = 0.6
+            
+        # Enlazar la caché LRU a la instancia para evitar leaks de memoria globales
+        self._predict_single_cached = functools.lru_cache(maxsize=settings.cache_size)(self._predict_single)
 
+    def _predict_single(self, text: str, use_prefilter: bool) -> dict:
+        text_norm = normalize_placeholders(text)
+        proba = self.pipeline.predict_proba([text_norm])[0]
+        pred = (proba >= self.thresholds).astype(int)
 
-    def predict(self, texts, use_prefilter=True):
+        # Active Learning Feedback Loop
+        mask = (proba >= settings.active_learning_min_prob) & (proba <= settings.active_learning_max_prob)
+        if mask.any():
+            self._log_active_learning(text, proba, mask)
+
+        if use_prefilter and prefilter_to_none(text_norm):
+            pred[:] = 0
+
+        detected_labels = [
+            self.labels[j] for j, is_detected in enumerate(pred) if is_detected
+        ]
+
+        return {
+            "original_text": text,
+            "normalized_text": text_norm,
+            "detected": len(detected_labels) > 0,
+            "labels": detected_labels,
+        }
+
+    def _log_active_learning(self, text: str, proba, mask):
+        try:
+            import csv
+            import datetime
+            
+            log_path = os.path.join(
+                os.path.dirname(os.path.dirname(os.path.dirname(__file__))), 
+                settings.active_learning_log_path
+            )
+            os.makedirs(os.path.dirname(log_path), exist_ok=True)
+            
+            file_exists = os.path.exists(log_path)
+            with open(log_path, mode="a", encoding="utf-8", newline="") as f:
+                writer = csv.writer(f)
+                if not file_exists:
+                    writer.writerow(["timestamp", "text", "ambiguous_labels", "probabilities"])
+                
+                ambiguous_labels = [self.labels[i] for i, is_ambiguous in enumerate(mask) if is_ambiguous]
+                probs_str = [f"{proba[i]:.3f}" for i, is_ambiguous in enumerate(mask) if is_ambiguous]
+                
+                writer.writerow([
+                    datetime.datetime.now().isoformat(),
+                    text,
+                    "|".join(ambiguous_labels),
+                    "|".join(probs_str)
+                ])
+        except Exception:
+            pass
+
+    def predict(self, texts: list[str] | str, use_prefilter: bool = True) -> list[dict]:
         if isinstance(texts, str):
             texts = [texts]
 
-        texts_norm = [normalize_placeholders(t) for t in texts]
-        proba = self.pipeline.predict_proba(texts_norm)
-        pred = (proba >= self.thresholds).astype(int)
+        if not texts:
+            return []
 
-        if use_prefilter:
-            disc = [prefilter_to_none(tn) for tn in texts_norm]
-            for i, d in enumerate(disc):
-                if d:
-                    pred[i, :] = 0
-
-        # Mapea resultados
-        results = []
-        for i, p in enumerate(pred):
-            detected_labels = [
-                self.labels[j] for j, is_detected in enumerate(p) if is_detected
-            ]
-            results.append(
-                {
-                    "original_text": texts[i],
-                    "normalized_text": texts_norm[i],
-                    "detected": len(detected_labels) > 0,
-                    "labels": detected_labels,
-                }
-            )
-
-        return results
+        return [self._predict_single_cached(t, use_prefilter) for t in texts]
 
 
 predictor_instance = None
